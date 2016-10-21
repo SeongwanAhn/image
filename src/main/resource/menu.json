@@ -1,0 +1,16 @@
+[ {
+  "menuName" : "사용자",
+  "menuUrl" : "/admin/user/list",
+  "subMenues" : null,
+  "mainMenu" : true
+}, {
+  "menuName" : "공통코드",
+  "menuUrl" : "#",
+  "subMenues" : [ {
+    "menuName" : "공통코드",
+    "menuUrl" : "/admin/common/code/list",
+    "subMenues" : null,
+    "mainMenu" : false
+  } ],
+  "mainMenu" : true
+} ]

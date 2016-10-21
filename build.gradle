@@ -1,0 +1,37 @@
+buildscript {
+    repositories {
+        //Required repos
+        mavenCentral()
+        maven { url "http://repo.spring.io/snapshot" }
+        maven { url "http://repo.spring.io/milestone" }
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+
+repositories {
+    mavenCentral()
+    maven { url "http://repo.spring.io/snapshot" }
+    maven { url "http://repo.spring.io/milestone" }
+}
+
+
+dependencies {
+    compile				'commons-lang:commons-lang:2.4'
+    compile group: 'com.mortennobel', name: 'java-image-scaling', version: '0.8.6'
+    compile group: 'com.jhlabs', name: 'filters', version: '2.0.235-1'
+    compile group: 'net.coobird', name: 'thumbnailator', version: '0.4.8'
+ 
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+	compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.8.3'
+
+    
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.3'
+}
+
